@@ -1,0 +1,26 @@
+@import 'extensions';
+
+.timer {
+  flex: none;
+  width: 50%;
+  padding: 2rem 1rem;
+  text-align: center;
+
+  &-label {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  &-controls {
+    @extend %flex;
+    font-size: 2rem;
+  }
+
+  &-time {
+    @extend %i-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+  }
+}

@@ -1,0 +1,13 @@
+.display {
+  padding: 1rem;
+  font-size: 3rem;
+  font-weight: 600;
+
+  &-label {
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 601px) {
+    padding: 2rem;
+  }
+}

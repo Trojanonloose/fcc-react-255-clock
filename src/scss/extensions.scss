@@ -1,0 +1,10 @@
+%flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%i-flex {
+  @extend %flex;
+  display: inline-flex;
+}

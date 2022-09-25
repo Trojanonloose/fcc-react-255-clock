@@ -1,0 +1,103 @@
+@import 'scss/extensions';
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+  font-family: Comfortaa, cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @extend %flex;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/images/timer.jpg);
+  background-repeat: no-repeat;
+  transition: background-image 300ms, background-position 300ms;
+  backdrop-filter: brightness(0.85);
+
+  &.work {
+    background-image: url(/images/work.jpg);
+
+    #root {
+      background-color: #ffffffaa;
+    }
+  }
+
+  &.break {
+    background-image: url(/images/break.jpg);
+
+    #root {
+      background-color: #d2d2f399;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: inherit;
+  font-family: inherit;
+  user-select: none;
+}
+
+#root {
+  margin: auto;
+  flex: 1;
+  padding: 4rem 1rem;
+  width: 100%;
+  max-width: 600px;
+  background-color: #adadffcc;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  max-height: 100%;
+  overflow: auto;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.btn-icon {
+  @extend %i-flex;
+  background-color: transparent;
+  border: none;
+
+  &.xl {
+    font-size: 2.5rem;
+  }
+}
+
+.configurations {
+  @extend %flex;
+}
+
+.actions {
+  margin: 1rem auto 0;
+}
+
+@media screen and (min-width: 601px) {
+  #root {
+    border-radius: 1rem;
+    padding: 4rem;
+    flex: none;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .btn-icon.xl {
+    font-size: 3rem;
+  }
+}
